@@ -1,4 +1,13 @@
 package shb.wrd.finalprojshab.data.MySubjectTable;
 
-public class MySubject {
-}
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+    @Entity
+    public class MySubject
+    {
+
+        @PrimaryKey(autoGenerate = true)
+        public long key_id;
+
+        public String title;
+    }
