@@ -28,7 +28,7 @@ import java.util.List;
         void deleteTask(MySubject... s);
 
         // حذف حسب keyid
-        @Query("DELETE FROM MySubject WHERE keyid = :keyid")
+        @Query("DELETE FROM MySubject WHERE key_id = :keyid")
         void deleteTask(long keyid);
 
         // البحث عن موضوع حسب العنوان

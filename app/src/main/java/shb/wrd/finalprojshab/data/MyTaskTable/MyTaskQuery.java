@@ -25,7 +25,7 @@ import java.util.List;
          * @param userid_p* رقم المستعمل
          * @return تعيد قائمة مهمات كان يتحدث بكل تغيير
          */
-        @Query("SELECT * FROM MyTask WHERE userId=:userid_p ORDER BY time DESC")
+        @Query("SELECT * FROM MyTask WHERE userId=:userid_p ORDER BY startTime DESC")
         LiveData<List<MyTask>> getAllTaskOrderBy(long userid_p);
 
         /**
