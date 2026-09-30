@@ -1,4 +1,4 @@
-package shb.wrd.finalprojshab;
+package shb.wrd.finalprojshab.viewPkg;
 
 import android.os.Bundle;
 
@@ -8,6 +8,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import shb.wrd.finalprojshab.R;
 import shb.wrd.finalprojshab.data.AppDataBase;
 import shb.wrd.finalprojshab.data.MySubjectTable.MySubject;
 import shb.wrd.finalprojshab.data.MySubjectTable.MySubjectQuery;
