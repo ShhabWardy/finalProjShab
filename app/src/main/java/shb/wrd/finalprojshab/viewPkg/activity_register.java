@@ -1,6 +1,7 @@
 package shb.wrd.finalprojshab.viewPkg;
 
 import android.os.Bundle;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,6 +12,12 @@ import androidx.core.view.WindowInsetsCompat;
 import shb.wrd.finalprojshab.R;
 
 public class activity_register extends AppCompatActivity {
+    private TextView
+    private Plain Text
+    privatePlain Text
+    privatePlain Text
+    privatePlain Text
+    private Button btn_Register;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

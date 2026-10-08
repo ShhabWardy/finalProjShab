@@ -1,6 +1,7 @@
 package shb.wrd.finalprojshab.viewPkg;
 
 import android.os.Bundle;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,6 +12,7 @@ import androidx.core.view.WindowInsetsCompat;
 import shb.wrd.finalprojshab.R;
 
 public class activity_add_task extends AppCompatActivity {
+    private Button
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
