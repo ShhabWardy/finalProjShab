@@ -1,4 +1,4 @@
-package shb.wrd.finalprojshab.data;
+package shb.wrd.finalprojshab.model;
 
 import android.content.Context;
 
@@ -6,12 +6,12 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
-import shb.wrd.finalprojshab.data.MySubjectTable.MySubject;
-import shb.wrd.finalprojshab.data.MySubjectTable.MySubjectQuery;
-import shb.wrd.finalprojshab.data.MyTaskTable.MyTask;
-import shb.wrd.finalprojshab.data.MyTaskTable.MyTaskQuery;
-import shb.wrd.finalprojshab.data.MyUserTable.MyUser;
-import shb.wrd.finalprojshab.data.MyUserTable.MyUserQuery;
+import shb.wrd.finalprojshab.model.MySubjectTable.MySubject;
+import shb.wrd.finalprojshab.model.MySubjectTable.MySubjectQuery;
+import shb.wrd.finalprojshab.model.MyTaskTable.MyTask;
+import shb.wrd.finalprojshab.model.MyTaskTable.MyTaskQuery;
+import shb.wrd.finalprojshab.model.MyUserTable.MyUser;
+import shb.wrd.finalprojshab.model.MyUserTable.MyUserQuery;
 
 
 /**

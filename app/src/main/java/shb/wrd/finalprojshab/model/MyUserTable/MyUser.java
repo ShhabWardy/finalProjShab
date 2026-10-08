@@ -1,4 +1,4 @@
-package shb.wrd.finalprojshab.data.MyUserTable;
+package shb.wrd.finalprojshab.model.MyUserTable;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;

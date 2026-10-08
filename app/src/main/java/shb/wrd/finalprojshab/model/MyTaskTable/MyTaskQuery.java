@@ -1,4 +1,4 @@
-package shb.wrd.finalprojshab.data.MyTaskTable;
+package shb.wrd.finalprojshab.model.MyTaskTable;
 
 
 import androidx.lifecycle.LiveData;
@@ -18,7 +18,7 @@ import java.util.List;
          * @return قائمة من المهمات
          */
         @Query("SELECT * FROM MyTask ORDER BY importance DESC")
-        List<MyTask> getAllTasks();
+        LiveData<  List<MyTask>> getAllTasks();
 
         /**
          * إرجاع المهمات حسب المستعمل وإذا انتهت أم لا ومرتبة تنازلياً حسب الأهمية
@@ -69,4 +69,9 @@ import java.util.List;
     @Query("SELECT * FROM MyTask WHERE subId=:key_id " +
             "ORDER BY importance DESC")
     List<MyTask> getTasksBySubId(long key_id);
+    @Query("SELECT * FROM MyTask WHERE keyId=:taskId " +
+            "ORDER BY importance DESC")
+    LiveData<MyTask> getTaskById(long taskId);
+
+    LiveData<List<MyTask>> getTasksByTitle(String title);
 }

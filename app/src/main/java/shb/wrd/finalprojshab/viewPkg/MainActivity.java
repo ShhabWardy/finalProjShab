@@ -9,9 +9,9 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import shb.wrd.finalprojshab.R;
-import shb.wrd.finalprojshab.data.AppDataBase;
-import shb.wrd.finalprojshab.data.MySubjectTable.MySubject;
-import shb.wrd.finalprojshab.data.MySubjectTable.MySubjectQuery;
+import shb.wrd.finalprojshab.model.AppDataBase;
+import shb.wrd.finalprojshab.model.MySubjectTable.MySubject;
+import shb.wrd.finalprojshab.model.MySubjectTable.MySubjectQuery;
 
 public class MainActivity extends AppCompatActivity {
 

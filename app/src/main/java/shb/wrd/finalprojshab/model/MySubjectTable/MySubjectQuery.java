@@ -1,4 +1,4 @@
-package shb.wrd.finalprojshab.data.MySubjectTable;
+package shb.wrd.finalprojshab.model.MySubjectTable;
 
 import androidx.room.Dao;
 import androidx.room.Delete;

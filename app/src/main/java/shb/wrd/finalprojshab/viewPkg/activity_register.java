@@ -2,6 +2,8 @@ package shb.wrd.finalprojshab.viewPkg;
 
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,11 +14,11 @@ import androidx.core.view.WindowInsetsCompat;
 import shb.wrd.finalprojshab.R;
 
 public class activity_register extends AppCompatActivity {
-    private TextView
-    private Plain Text
-    privatePlain Text
-    privatePlain Text
-    privatePlain Text
+    private TextView Text_View;
+    private EditText et_FullName;
+    private EditText et_Email;
+    private EditText et_Password;
+    private EditText et_Phone;
     private Button btn_Register;
 
     @Override

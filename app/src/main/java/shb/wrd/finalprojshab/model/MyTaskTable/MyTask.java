@@ -1,4 +1,4 @@
-package shb.wrd.finalprojshab.data.MyTaskTable;
+package shb.wrd.finalprojshab.model.MyTaskTable;
 
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
