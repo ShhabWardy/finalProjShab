@@ -70,15 +70,15 @@ public class TaskRepository {
         return taskQuery.getTasksByTitle(title);
     }
 
-    /**
-     * البحث عن المهام التي تتطابق أوصافها مع النص المدخل.
-     *
-     * @param description النص أو الكلمة المراد البحث عنها في الوصف.
-     * @return قائمة المهام المطابقة.
-     */
-    public LiveData<List<MyTask>> getTasksByDescription(String description) {
-        return taskQuery.getTasksByDescription(description);
-    }
+//    /**
+//     * البحث عن المهام التي تتطابق أوصافها مع النص المدخل.
+//     *
+//     * @param description النص أو الكلمة المراد البحث عنها في الوصف.
+//     * @return قائمة المهام المطابقة.
+//     */
+//    public LiveData<List<MyTask>> getTasksByDescription(String description) {
+//        return taskQuery.getTasksByDescription(description);
+//    }
 
     /**
      * جلب المهام المفلترة حسب مستوى الأولوية.
@@ -90,16 +90,16 @@ public class TaskRepository {
         return taskQuery.getTasksByPriority(priority);
     }
 
-    /**
-     * جلب المهام الخاصة بمستخدم معين والتي تتطابق مع عنوان معين.
-     *
-     * @param userId معرف المستخدم.
-     * @param title  عنوان المهمة للبحث.
-     * @return قائمة المهام المطابقة.
-     */
-    public LiveData<List<MyTask>> getTasksByUserIdAndTitle(long userId, String title) {
-        return taskQuery.getTasksByUserIdAndTitle(userId, title);
-    }
+//    /**
+//     * جلب المهام الخاصة بمستخدم معين والتي تتطابق مع عنوان معين.
+//     *
+//     * @param userId معرف المستخدم.
+//     * @param title  عنوان المهمة للبحث.
+//     * @return قائمة المهام المطابقة.
+//     */
+//    public LiveData<List<MyTask>> getTasksByUserIdAndTitle(long userId, String title) {
+//        return taskQuery.getTasksByUserIdAndTitle(userId, title);
+//    }
 
     /**
      * إدراج مهمة أو عدة مهمات جديدة في قاعدة البيانات.
@@ -107,7 +107,7 @@ public class TaskRepository {
      * @param tasks المهام المراد إضافتها.
      */
     public void insert(MyTask... tasks) {
-        taskQuery.insert(tasks);
+        taskQuery.insertTask(tasks);
     }
 
     /**
@@ -116,19 +116,15 @@ public class TaskRepository {
      * @param tasks المهام المراد تحديثها.
      */
     public void update(MyTask... tasks) {
-        taskQuery.update(tasks);
+        taskQuery.updateTask(tasks);
     }
 
     /**
      * تحديث بيانات مهمة محددة (العنوان، الوصف، والأولوية) باستخدام معرف المهمة.
-     *
-     * @param taskId      معرف المهمة المراد تعديلها.
-     * @param title       العنوان الجديد.
-     * @param description الوصف الجديد.
-     * @param priority    الأولوية الجديدة.
-     */
-    public void updateTask(long taskId, String title, String description, int priority) {
-        taskQuery.updateTask(taskId, title, description, priority);
+     * @param m
+     */    public void updateTask(MyTask m) {
+
+        taskQuery.updateTask(m);
     }
 
     /**
@@ -137,7 +133,7 @@ public class TaskRepository {
      * @param tasks المهام المراد حذفها.
      */
     public void delete(MyTask... tasks) {
-        taskQuery.delete(tasks);
+        taskQuery.deleteTask(tasks);
     }
 
     /**
@@ -146,7 +142,7 @@ public class TaskRepository {
      * @param taskId معرف المهمة المراد حذفها.
      */
     public void deleteTaskById(long taskId) {
-        taskQuery.deleteTaskById(taskId);
+        taskQuery.deleteTask(taskId);
     }
 }
 

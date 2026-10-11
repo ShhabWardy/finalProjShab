@@ -74,4 +74,8 @@ import java.util.List;
     LiveData<MyTask> getTaskById(long taskId);
 
     LiveData<List<MyTask>> getTasksByTitle(String title);
+    @Query("SELECT * FROM MyTask WHERE importance=:priority " +
+            "ORDER BY importance DESC")
+    LiveData<List<MyTask>> getTasksByPriority(int priority);
+
 }
