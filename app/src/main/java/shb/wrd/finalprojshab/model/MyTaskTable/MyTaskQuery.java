@@ -77,5 +77,22 @@ import java.util.List;
     @Query("SELECT * FROM MyTask WHERE importance=:priority " +
             "ORDER BY importance DESC")
     LiveData<List<MyTask>> getTasksByPriority(int priority);
-
+    @Query("SELECT * FROM MyTask WHERE importance=:priority " +
+            "ORDER BY importance DESC")
+    void insert(MyTask[] tasks);
+    @Query("SELECT * FROM MyTask WHERE importance=:priority " +
+            "ORDER BY importance DESC")
+    LiveData<List<MyTask>> getTasksByUserIdAndTitle(long userId, String title);
+    @Query("SELECT * FROM MyTask WHERE importance=:priority " +
+            "ORDER BY importance DESC")
+    LiveData<List<MyTask>> getTasksByDescription(String description);
+    @Query("SELECT * FROM MyTask WHERE importance=:tasks " +
+            "ORDER BY importance DESC")
+    void update(MyTask[] tasks);
+    @Query("SELECT * FROM MyTask WHERE importance=:tasks " +
+            "ORDER BY importance DESC")
+    void delete(MyTask[] tasks);
+    @Query("SELECT * FROM MyTask WHERE importance=:taskId " +
+            "ORDER BY importance DESC")
+    void deleteTaskById(long taskId);
 }
