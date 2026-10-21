@@ -18,8 +18,8 @@ import shb.wrd.finalprojshab.model.MyTaskTable.MyTaskQuery;
         * عن بقية أجزاء التطبيق (ViewModels).
         */
 public class TaskRepository {
-    private final MyTaskQuery taskQuery;//واجهة الاستعلامات
-    private final LiveData<List<MyTask>> allTasks;//مبنى معطيات يحوي جميع المهلام المستخرجة
+    private  MyTaskQuery taskQuery;//واجهة الاستعلامات
+    private  LiveData<List<MyTask>> allTasks;//مبنى معطيات يحوي جميع المهلام المستخرجة
 
     /**
      * منشئ الكلاس (Constructor).
@@ -57,7 +57,8 @@ public class TaskRepository {
      * @param taskId معرف المهمة الفريد.
      * @return كائن المهمة المطلوب.
      */
-    public LiveData<MyTask> getTaskById(long taskId) {
+    public LiveData<List<MyTask>>  getTaskById(long taskId) {
+
         return taskQuery.getTaskById(taskId);
     }
 
@@ -112,60 +113,12 @@ public class TaskRepository {
     }
 
     /**
-     * تحديث مهمة أو عدة مهمات في قاعدة البيانات.
-     *
-     * @param tasks المهام المراد تحديثها.
-     */
-    public void update(MyTask... tasks) {
-        taskQuery.updateTask(tasks);
-    }
-
-    /**
      * تحديث بيانات مهمة محددة (العنوان، الوصف، والأولوية) باستخدام معرف المهمة.
      * @param m
      */    public void updateTask(MyTask m) {
 
         taskQuery.updateTask(m);
     }
-
-    /**
-     * حذف مهمة أو عدة مهمات من قاعدة البيانات.
-     *
-     * @param tasks المهام المراد حذفها.
-     */
-    public void delete(MyTask... tasks) {
-        taskQuery.deleteTask(tasks);
-    }
-
-    /**
-     * حذف مهمة محددة باستخدام معرفها الفريد (Task ID).
-     *
-     * @param taskId معرف المهمة المراد حذفها.
-     */
-    public void deleteTaskById(long taskId) {
-        taskQuery.deleteTask(taskId);
-    }
-    * جلب مهمة معينة بناءً على معرفها الفريد (Task ID).
-            *
-            * @param taskId معرف المهمة الفريد.
-            * @return كائن المهمة المطلوب.
-    */
-    public LiveData<MyTask> getTaskById(long taskId) {
-        return taskQuery.getTaskById(taskId);
-    }
-
-
-    /**
-     * البحث عن المهام التي تتطابق عناوينها مع النص المدخل.
-     *
-     * @param title النص أو الكلمة المراد البحث عنها في العنوان.
-     * @return قائمة المهام المطابقة.
-     */
-    public LiveData<List<MyTask>> getTasksByTitle(String title) {
-        return taskQuery.getTasksByTitle(title);
-    }
-
-
     /**
      * البحث عن المهام التي تتطابق أوصافها مع النص المدخل.
      *
@@ -177,15 +130,6 @@ public class TaskRepository {
     }
 
 
-    /**
-     * جلب المهام المفلترة حسب مستوى الأولوية.
-     *
-     * @param priority مستوى الأولوية المطلوب.
-     * @return قائمة المهام ذات الأولوية المحددة.
-     */
-    public LiveData<List<MyTask>> getTasksByPriority(int priority) {
-        return taskQuery.getTasksByPriority(priority);
-    }
 
 
     /**
@@ -200,14 +144,6 @@ public class TaskRepository {
     }
 
 
-    /**
-     * إدراج مهمة أو عدة مهمات جديدة في قاعدة البيانات.
-     *
-     * @param tasks المهام المراد إضافتها.
-     */
-    public void insert(MyTask... tasks) {
-        taskQuery.insert(tasks);
-    }
 
 
     /**
