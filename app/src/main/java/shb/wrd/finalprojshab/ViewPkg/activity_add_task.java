@@ -1,4 +1,4 @@
-package shb.wrd.finalprojshab.viewPkg;
+package shb.wrd.finalprojshab.ViewPkg;
 
 import android.os.Bundle;
 import android.widget.Button;

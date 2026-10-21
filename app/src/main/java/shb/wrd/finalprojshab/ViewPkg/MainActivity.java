@@ -1,6 +1,7 @@
-package shb.wrd.finalprojshab.viewPkg;
+package shb.wrd.finalprojshab.ViewPkg;
 
 import android.os.Bundle;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +15,9 @@ import shb.wrd.finalprojshab.model.MySubjectTable.MySubject;
 import shb.wrd.finalprojshab.model.MySubjectTable.MySubjectQuery;
 
 public class MainActivity extends AppCompatActivity {
+    private Button btnAddTaskScreen;
+    private Button btnRegisterScreen;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
         subjectQuery.insert(s2);
 
         setContentView(R.layout.activity_main);
+        btnAddTaskScreen.findViewById(R.id.btnAddTaskScreen);
+        btnRegisterScreen.findViewById(R.id.btnRegisterScreen);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);

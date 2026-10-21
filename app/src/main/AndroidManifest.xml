@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FinalProjShab">
         <activity
-            android:name=".viewPkg.MainActivity"
+            android:name=".ViewPkg.MainActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
@@ -22,11 +22,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".viewPkg.activity_add_task"
+            android:name=".ViewPkg.activity_add_task"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".viewPkg.activity_register"
+            android:name=".ViewPkg.activity_register"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
     </application>

@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:layout_gravity="center"
     android:orientation="vertical"
-    tools:context=".viewPkg.activity_add_task">
+    tools:context=".ViewPkg.activity_add_task">
 
     <TextView
         android:id="@+id/TextView"
