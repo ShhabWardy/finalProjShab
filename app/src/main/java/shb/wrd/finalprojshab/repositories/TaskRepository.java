@@ -157,19 +157,6 @@ public class TaskRepository {
 
 
     /**
-     * تحديث بيانات مهمة محددة (العنوان، الوصف، والأولوية) باستخدام معرف المهمة.
-     *
-     * @param taskId      معرف المهمة المراد تعديلها.
-     * @param title       العنوان الجديد.
-     * @param description الوصف الجديد.
-     * @param priority    الأولوية الجديدة.
-     */
-    public void updateTask(long taskId, String title, String description, int priority) {
-        taskQuery.updateTask(taskId, title, description, priority);
-    }
-
-
-    /**
      * حذف مهمة أو عدة مهمات من قاعدة البيانات.
      *
      * @param tasks المهام المراد حذفها.
@@ -188,3 +175,4 @@ public class TaskRepository {
         taskQuery.deleteTaskById(taskId);
     }
 }
+
