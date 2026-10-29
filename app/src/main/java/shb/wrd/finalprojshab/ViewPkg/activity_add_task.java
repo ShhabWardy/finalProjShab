@@ -26,6 +26,11 @@ public class activity_add_task extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_add_task);
+        Text_View = findViewById(R.id.TextView);
+        Text_View = findViewById(R.id.TextView);
+        Text_View = findViewById(R.id.TextView);
+        Text_View = findViewById(R.id.TextView);
+        Text_View = findViewById(R.id.TextView);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);

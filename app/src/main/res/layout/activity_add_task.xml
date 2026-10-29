@@ -24,8 +24,8 @@
         android:layout_height="69dp"
         android:layout_margin="20dp"
         android:ems="10"
-        android:inputType="text"
-        android:text="Task Title" />
+        android:hint="Task Title"
+        android:inputType="text" />
 
     <EditText
         android:id="@+id/etDescription"
@@ -33,8 +33,8 @@
         android:layout_height="61dp"
         android:layout_margin="20dp"
         android:ems="10"
-        android:inputType="text"
-        android:text="Task Description" />
+        android:hint="Task Description"
+        android:inputType="text" />
 
     <EditText
         android:id="@+id/etPriority"
@@ -42,8 +42,8 @@
         android:layout_height="72dp"
         android:layout_margin="20dp"
         android:ems="10"
-        android:inputType="text"
-        android:text="Priority (e.g. 1. 2. 3)" />
+        android:hint="Priority (e.g. 1. 2. 3)"
+        android:inputType="text" />
 
     <Button
         android:id="@+id/btnSaveTask"

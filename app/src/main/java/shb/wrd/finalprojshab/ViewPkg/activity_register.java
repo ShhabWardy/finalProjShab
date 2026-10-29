@@ -26,6 +26,12 @@ public class activity_register extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_register);
+        Text_View = findViewById(R.id.TextView);
+        et_FullName = findViewById(R.id.etFullName);
+        et_Email = findViewById(R.id.etEmail);
+        et_Password = findViewById(R.id.etPassword);
+        et_Phone = findViewById(R.id.etPhone);
+        btn_Register = findViewById(R.id.btnRegister);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
