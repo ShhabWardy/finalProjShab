@@ -1,25 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
     tools:context=".ViewPkg.MainActivity">
 
     <Button
         android:id="@+id/btnAddTaskScreen"
         android:layout_width="410dp"
         android:layout_height="51dp"
-        android:text="Add New Task"
-        tools:layout_editor_absoluteX="2dp"
-        tools:layout_editor_absoluteY="36dp" />
+        android:text="Add New Task" />
 
     <Button
         android:id="@+id/btnRegisterScreen"
         android:layout_width="412dp"
         android:layout_height="50dp"
-        android:text="Register User"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="132dp" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:text="Register User" />
+</LinearLayout>
