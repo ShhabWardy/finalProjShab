@@ -6,7 +6,6 @@ import androidx.lifecycle.LiveData;
 
 import java.util.List;
 
-import kotlinx.coroutines.scheduling.Task;
 import shb.wrd.finalprojshab.model.AppDataBase;
 import shb.wrd.finalprojshab.model.MyTaskTable.MyTask;
 import shb.wrd.finalprojshab.model.MyTaskTable.MyTaskQuery;
@@ -57,7 +56,7 @@ public class TaskRepository {
      * @param taskId معرف المهمة الفريد.
      * @return كائن المهمة المطلوب.
      */
-    public LiveData<List<MyTask>>  getTaskById(long taskId) {
+    public LiveData<MyTask> getTaskById(long taskId) {
 
         return taskQuery.getTaskById(taskId);
     }
@@ -90,6 +89,10 @@ public class TaskRepository {
      */
     public LiveData<List<MyTask>> getTasksByPriority(int priority) {
         return taskQuery.getTasksByPriority(priority);
+    }
+
+    public LiveData<List<MyTask>> getTasksByUserId(long userId){
+        return taskQuery.getAllTaskOrderBy(userId);
     }
 
 //    /**
