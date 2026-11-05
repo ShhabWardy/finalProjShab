@@ -19,5 +19,7 @@
         android:id="@+id/btnRegisterScreen"
         android:layout_width="412dp"
         android:layout_height="50dp"
+        android:onClick="onClick2"
         android:text="Register User" />
+
 </LinearLayout>
