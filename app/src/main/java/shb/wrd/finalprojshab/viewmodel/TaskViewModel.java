@@ -51,7 +51,7 @@ import shb.wrd.finalprojshab.repositories.TaskRepository;
          * @return قائمة المهام الخاصة بالمستخدم.
          */
         public LiveData<List<MyTask>> getTasksByUserId(long userId) {
-            return repository.
+            return repository.getTasksByUserId(userId);
         }
 
 
@@ -161,5 +161,3 @@ import shb.wrd.finalprojshab.repositories.TaskRepository;
             repository.deleteTaskById(taskId);
         }
     }
-
-}

@@ -71,28 +71,25 @@ import java.util.List;
     List<MyTask> getTasksBySubId(long key_id);
     @Query("SELECT * FROM MyTask WHERE keyId=:taskId " +
             "ORDER BY importance DESC")
-    LiveData<List<MyTask>>  getTaskById(long taskId);
+    LiveData<MyTask>  getTaskById(long taskId);
 
+    @Query("SELECT * FROM MyTask WHERE shortTitle LIKE '%' || :title || '%' ORDER BY importance DESC")
     LiveData<List<MyTask>> getTasksByTitle(String title);
     @Query("SELECT * FROM MyTask WHERE importance=:priority " +
             "ORDER BY importance DESC")
     LiveData<List<MyTask>> getTasksByPriority(int priority);
-    @Query("SELECT * FROM MyTask WHERE importance=:priority " +
-            "ORDER BY importance DESC")
-    void insert(MyTask[] tasks);
-    @Query("SELECT * FROM MyTask WHERE importance=:priority " +
+   @Insert
+    void insert(MyTask... tasks);
+    @Query("SELECT * FROM MyTask WHERE userId=:userId AND shortTitle=:title " +
             "ORDER BY importance DESC")
     LiveData<List<MyTask>> getTasksByUserIdAndTitle(long userId, String title);
-    @Query("SELECT * FROM MyTask WHERE importance=:priority " +
+    @Query("SELECT * FROM MyTask WHERE text LIKE '%' || :description || '%' " +
             "ORDER BY importance DESC")
     LiveData<List<MyTask>> getTasksByDescription(String description);
-    @Query("SELECT * FROM MyTask WHERE importance=:tasks " +
-            "ORDER BY importance DESC")
-    void update(MyTask[] tasks);
-    @Query("SELECT * FROM MyTask WHERE importance=:tasks " +
-            "ORDER BY importance DESC")
-    void delete(MyTask[] tasks);
-    @Query("SELECT * FROM MyTask WHERE importance=:taskId " +
-            "ORDER BY importance DESC")
+    @Update
+    void update(MyTask... tasks);
+    @Delete
+    void delete(MyTask... tasks);
+    @Query("DELETE FROM MyTask WHERE keyId=:taskId")
     void deleteTaskById(long taskId);
 }
