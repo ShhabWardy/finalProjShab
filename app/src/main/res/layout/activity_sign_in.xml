@@ -9,7 +9,7 @@
     android:background="#FFFFFF"
     android:orientation="vertical"
     app:layoutDescription="@xml/activity_sign_in_scene"
-    tools:context=".ViewPkg.SignIn">
+    tools:context=".ViewPkg.SignInActivity">
 
     <TextView
         android:id="@+id/textView"

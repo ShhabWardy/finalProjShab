@@ -11,14 +11,14 @@
 
     <Button
         android:id="@+id/btnAddTaskScreen"
-        android:layout_width="410dp"
-        android:layout_height="51dp"
+        android:layout_width="match_parent"
+        android:layout_height="71dp"
         android:text="Add New Task" />
 
     <Button
         android:id="@+id/btnRegisterScreen"
-        android:layout_width="412dp"
-        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
         android:onClick="onClick2"
         android:text="Register User" />
 

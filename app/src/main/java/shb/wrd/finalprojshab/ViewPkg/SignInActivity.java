@@ -10,7 +10,12 @@ import androidx.core.view.WindowInsetsCompat;
 
 import shb.wrd.finalprojshab.R;
 
-public class SignIn extends AppCompatActivity {
+public class SignInActivity extends AppCompatActivity {
+    private
+    private
+    private
+    private
+    private
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
