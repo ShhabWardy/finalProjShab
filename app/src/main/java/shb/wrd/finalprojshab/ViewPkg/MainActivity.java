@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view)
             {
-                Intent i=new Intent(MainActivity.this , activity_add_task.class);
+                Intent i=new Intent(MainActivity.this , AddTaskActivity.class);
                 startActivity(i);
             }
             public void onClick2(View view)

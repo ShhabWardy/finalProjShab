@@ -13,7 +13,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import shb.wrd.finalprojshab.R;
 
-public class activity_add_task extends AppCompatActivity {
+public class AddTaskActivity extends AppCompatActivity {
     private TextView Text_View;
     private EditText et_Title;
     private EditText et_Description;
@@ -27,10 +27,10 @@ public class activity_add_task extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_add_task);
         Text_View = findViewById(R.id.TextView);
-        Text_View = findViewById(R.id.TextView);
-        Text_View = findViewById(R.id.TextView);
-        Text_View = findViewById(R.id.TextView);
-        Text_View = findViewById(R.id.TextView);
+        et_Title = findViewById(R.id.etTitle);
+        et_Description = findViewById(R.id.etDescription);
+        et_Priority = findViewById(R.id.etPriority);
+        btnSave_Task = findViewById(R.id.btnSaveTask);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
