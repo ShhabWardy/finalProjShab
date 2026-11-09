@@ -1,6 +1,9 @@
 package shb.wrd.finalprojshab.ViewPkg;
 
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,11 +14,11 @@ import androidx.core.view.WindowInsetsCompat;
 import shb.wrd.finalprojshab.R;
 
 public class SignInActivity extends AppCompatActivity {
-    private
-    private
-    private
-    private
-    private
+    private TextView textView;
+    private EditText etEmailAddress;
+    private EditText etPassword2;
+    private Button btnLogIn;
+    private Button btnREGISTER2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -47,16 +47,16 @@ public class MainActivity extends AppCompatActivity {
             return insets;
             ///
         });
+
+        btnRegisterScreen.setOnClickListener(view -> {
+            Intent i=new Intent(MainActivity.this , activity_register.class);
+            startActivity(i);
+        });
         btnAddTaskScreen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view)
             {
                 Intent i=new Intent(MainActivity.this , AddTaskActivity.class);
-                startActivity(i);
-            }
-            public void onClick2(View view)
-            {
-                Intent i=new Intent(MainActivity.this , activity_register.class);
                 startActivity(i);
             }
         });
