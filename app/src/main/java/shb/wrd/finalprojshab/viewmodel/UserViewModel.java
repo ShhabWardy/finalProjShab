@@ -57,7 +57,7 @@ public class UserViewModel extends AndroidViewModel {
      * @param myPassw كلمة السر للمستخدم.
      * @return كائن المستخدم إذا وجد، أو null إذا لم يوجد.
      */
-    public MyUser checkEmailPassw(String myEmail, String myPassw) {
+    public MyUser logIn(String myEmail, String myPassw) {
         return repository.checkEmailPassw(myEmail, myPassw);
     }
 
