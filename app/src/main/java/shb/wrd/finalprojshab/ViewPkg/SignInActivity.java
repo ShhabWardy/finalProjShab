@@ -68,7 +68,7 @@ public class SignInActivity extends AppCompatActivity {
             etPassword2.requestFocus();
             return;
         }
-//gfhfdghfdgh
+
         MyUser user = userViewModel.logIn(email, password);
         if (user != null) {
             Toast.makeText(this, "Welcome, " + user.getFullName(), Toast.LENGTH_SHORT).show();

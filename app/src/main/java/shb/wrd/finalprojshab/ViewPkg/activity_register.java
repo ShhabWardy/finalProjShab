@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,18 +16,17 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.lifecycle.ViewModelProvider;
 
 import shb.wrd.finalprojshab.R;
+import shb.wrd.finalprojshab.model.MyUserTable.MyUser;
 import shb.wrd.finalprojshab.viewmodel.UserViewModel;
 
 public class activity_register extends AppCompatActivity {
-    private TextView Text_View;
-    private EditText et_FullName;
-    private EditText et_Email;
-    private EditText et_Password;
-    private EditText et_Phone;
-    private Button btn_Register;
+    private TextView TextView;
+    private EditText etFullName;
+    private EditText etEmail;
+    private EditText etPassword;
+    private EditText etPhone;
+    private Button btnRegister;
     private UserViewModel userViewModel;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,23 +38,59 @@ public class activity_register extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        Text_View = findViewById(R.id.TextView);
-        et_FullName = findViewById(R.id.etFullName);
-        et_Email = findViewById(R.id.etEmail);
-        et_Password = findViewById(R.id.etPassword);
-        et_Phone = findViewById(R.id.etPhone);
-        btn_Register = findViewById(R.id.btnRegister);
-        userViewModel = new ViewModelProvider(this).get(UserViewModel.class);
-        btn_Register.setOnClickListener(new View.OnClickListener() {
+        TextView = findViewById(R.id.TextView);
+        etFullName = findViewById(R.id.etFullName);
+        etEmail = findViewById(R.id.etEmail);
+        etPassword = findViewById(R.id.etPassword);
+        etPhone = findViewById(R.id.etPhone);
+        btnRegister = findViewById(R.id.btnRegister);
+
+        btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 signup();
             }
         });
+        userViewModel = new ViewModelProvider(this).get(UserViewModel.class);
     }
 
     private void signup()
     {
-        String fullname
+        String fullName = etFullName.getText().toString().trim();
+        String email = etEmail.getText().toString().trim();
+        String password = etPassword.getText().toString().trim();
+        String phone = etPhone.getText().toString().trim();
+        //فحص المعطيات
+        if (fullName.isEmpty()){
+            etFullName.setError("Full name is required");
+            etFullName.requestFocus();
+            return;
+        }
+        if (email.isEmpty()) {
+            etEmail.setError("Email is required");
+            etEmail.requestFocus();
+            return;
+        }
+        if (password.isEmpty()) {
+            etPassword.setError("Password is required");
+            etPassword.requestFocus();
+            return;
+        }
+        if (phone.isEmpty()) {
+            etPhone.setError("Phone is required");
+            etPhone.requestFocus();
+            return;
+        }
+
+        // حفظ في قاعدة البلنات
+        MyUser user = new MyUser();
+        user.setFullName(fullName);
+        user.setEmail(email);
+        user.setPassw(password);
+        user.setPhone(phone);
+        userViewModel.insert(user);
+        Toast.makeText(this, "Welcome, " + user.getFullName(), Toast.LENGTH_SHORT).show();
+        finish();
+
     }
 }
