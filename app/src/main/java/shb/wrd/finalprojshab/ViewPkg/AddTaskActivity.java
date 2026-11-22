@@ -19,8 +19,6 @@ public class AddTaskActivity extends AppCompatActivity {
     private EditText et_Description;
     private EditText et_Priority;
     private Button btnSave_Task;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

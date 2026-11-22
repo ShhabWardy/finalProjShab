@@ -54,8 +54,7 @@ public class activity_register extends AppCompatActivity {
         userViewModel = new ViewModelProvider(this).get(UserViewModel.class);
     }
 
-    private void signup()
-    {
+    private void signup() {
         String fullName = etFullName.getText().toString().trim();
         String email = etEmail.getText().toString().trim();
         String password = etPassword.getText().toString().trim();

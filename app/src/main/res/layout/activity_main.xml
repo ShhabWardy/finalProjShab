@@ -12,13 +12,13 @@
     <Button
         android:id="@+id/btnAddTaskScreen"
         android:layout_width="match_parent"
-        android:layout_height="71dp"
+        android:layout_height="50dp"
         android:text="Add New Task" />
 
     <Button
         android:id="@+id/btnRegisterScreen"
         android:layout_width="match_parent"
-        android:layout_height="64dp"
+        android:layout_height="50dp"
         android:onClick="onClick2"
         android:text="Register User" />
 
